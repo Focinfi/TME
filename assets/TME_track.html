@@ -1,0 +1,49 @@
+<html manifest="mymanifest.manifest">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" type="text/css" href="./css/track_style.css">
+    <script type="text/javascript" src="./js/JQuery.js"></script>
+    <script type="text/javascript" src="./js/track_db.js"></script>
+    <script type="text/javascript" src="./js/track_show.js"></script>
+    <script type="text/javascript" src="./js/track_js.js"></script>
+
+    <script type="text/javascript">
+        var track_db_handler = new trackDB_handler.track_db_handler();
+    </script>
+</head>
+
+<body>
+<div class="nav_bar">
+    <div class="nav_title">
+        <div class="back_btn" id="track_back_btn"><a href="TME_index.html">返回</a></div>
+        轨迹之跑步
+        <div class="action_btn" id="track_action_btn"></div>
+    </div>
+
+    <div class="action_menu" id="action_menu" style="display:none">
+        <ul>
+            <li><input type="button" class="menu_btn" value="Action"/>
+            </li>
+            <li><input type="button" class="menu_btn" value="Action"/>
+            </li>
+            <li><input type="button" class="menu_btn" value="Action"/>
+            </li>
+        </ul>
+    </div>
+</div>
+<div style="height: 50px; width: 100%"></div>
+<div id="track">
+    <div class="track_list">
+        <div class="month_title" id="month_title">十月</div>
+    </div>
+    <input type="text" id="date" value="date"/>
+    <input type="text" id="site" value="site"/>
+    <input type="text" id="positive_words" value="go go go"/>
+    <input type="button" id="track_save" value="save" onclick="track_db_handler.insert()"/>
+</div>
+</body>
+</html>
+
+
+
+
